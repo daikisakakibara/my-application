@@ -16,7 +16,6 @@ watch(selected, (selectedName) => {
 	console.log(selected)
 })
 
-
 const filteredNames = computed(() => 
 	names.value.filter((n) => n.toLowerCase().startsWith(filterWords.value.toLowerCase()))
 )
