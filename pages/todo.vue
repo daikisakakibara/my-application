@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 
 type Todo = {
 	name: string,
@@ -30,6 +31,7 @@ const todoList = ref<Todo[]>([
 	}
 ])
 
+// TodoListコンポーネントとして切り出す
 // const filteredTodoList = computed(() => {
 // 	if(tab.value === 'active'){
 // 		return todoList.value.filter((todo) => !todo.completed)
@@ -68,13 +70,19 @@ const swichTab = (value:string) => {
 <template>
 	<body class="m-10">
 		<header>
-			<input v-model="todo.name" type="text" placeholder="write Todo" @keydown.enter.prevent="addTodo">
+			<input 
+			v-model="todo.name" 
+			type="text" 
+			placeholder="write Todo" 
+			@keydown.enter.prevent="addTodo"
+			>
 		</header>
 	<TodoList
 	:todo="todo"
 	:tab="tab"
 	:todo-list="todoList"
 	/>
+<!-- TodoListコンポーネントとして切り出す -->
 		<!-- <ul>
 			<li 
 			class='block' 
@@ -89,7 +97,6 @@ const swichTab = (value:string) => {
 			</li>
 		</ul> -->
 		<footer class="flex" >
-			<!-- <label class="mr-4">{{ filteredTodoList.length }} items</label> -->
 			<section class="space-x-4">
 				<button @click="swichTab('all')">All</button>
 				<button @click="swichTab('active')">Active</button>

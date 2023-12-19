@@ -13,12 +13,16 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@nuxtjs/vuetify": "^1.12.3",
+    "@types/eslint": "^8.44.9",
+    "eslint": "^8.56.0",
     "nuxt": "^3.8.1",
     "sass": "^1.69.5",
     "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.3",
     "vite-plugin-vuetify": "^1.0.2",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5",
+    "vue-tsc": "^1.8.25",
     "vuetify": "^3.4.4"
   },
   "dependencies": {
